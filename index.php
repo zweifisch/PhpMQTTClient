@@ -227,7 +227,7 @@ require('SAM/php_sam.php');
 $conn = new SAMConnection();
 
 //start initialise the connection
-$result = $conn->connect(SAM_MQTT, array(SAM_HOST => '127.0.0.1', SAM_PORT => 1883));      
+$result = $conn->connect(SAM_MQTT, array('SAM_HOST' => '127.0.0.1', 'SAM_PORT' => 1883));      
 if ($result) {
   $conn->disconnect();
   print_r("<span class='online'>Online</span>");

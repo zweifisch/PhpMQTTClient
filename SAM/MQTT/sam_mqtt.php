@@ -99,15 +99,15 @@ class SAMConnection_MQTT {
     if ($this->debug) e('SAMConnection_MQTT.Connect()');
 
     /* Check our optional parameter array for the necessary bits...   */
-    if ($options[SAM_PORT] == '') {
+    if ($options['SAM_PORT'] == '') {
         $this->port = 1883;
     } else {
-        $this->port = $options[SAM_PORT];
+        $this->port = $options['SAM_PORT'];
     }
-    if ($options[SAM_HOST] == '') {
+    if ($options['SAM_HOST'] == '') {
         $this->host = 'localhost';
     } else {
-        $this->host = $options[SAM_HOST];
+        $this->host = $options['SAM_HOST'];
     }
 
     $this->cleanstart = in_array(SAM_MQTT_CLEANSTART, $options);
